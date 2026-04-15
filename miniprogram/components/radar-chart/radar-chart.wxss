@@ -1,0 +1,11 @@
+.radar-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.radar-canvas {
+  width: 480rpx;
+  height: 480rpx;
+}

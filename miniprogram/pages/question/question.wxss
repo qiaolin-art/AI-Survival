@@ -1,0 +1,123 @@
+.question-page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  padding-top: 140rpx;
+}
+
+/* Top Bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 60rpx 40rpx 20rpx;
+  background: linear-gradient(to bottom, #0a0a0a 60%, transparent);
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 0;
+  opacity: 0.6;
+}
+
+.back-btn:active {
+  opacity: 1;
+}
+
+.back-btn.hidden {
+  visibility: hidden;
+}
+
+.back-arrow {
+  font-size: 40rpx;
+  color: #888;
+  margin-right: 8rpx;
+}
+
+.back-text {
+  font-size: 24rpx;
+  color: #888;
+}
+
+.placeholder {
+  height: 48rpx;
+}
+
+/* Progress */
+.progress-section {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+/* Question Content */
+.question-content {
+  padding-bottom: 80rpx;
+}
+
+.question-content.fade-in {
+  animation: fadeSlideIn 0.35s ease forwards;
+}
+
+.question-content.fade-out {
+  animation: fadeSlideOut 0.15s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-40rpx);
+  }
+}
+
+/* Question Tag */
+.q-tag {
+  margin-bottom: 24rpx;
+}
+
+.q-tag-text {
+  font-size: 24rpx;
+  color: #e74c3c;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+}
+
+/* Scenario */
+.scenario {
+  margin-bottom: 48rpx;
+  padding: 32rpx;
+  background: #111;
+  border-left: 4rpx solid #e74c3c;
+  border-radius: 0 12rpx 12rpx 0;
+}
+
+.scenario-text {
+  font-size: 30rpx;
+  color: #bbb;
+  line-height: 1.8;
+}
+
+/* Options */
+.options-list {
+  margin-top: 16rpx;
+}

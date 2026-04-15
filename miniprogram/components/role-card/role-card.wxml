@@ -1,0 +1,20 @@
+<view class="role-card-wrap">
+  <view class="role-header">
+    <text class="role-emoji">{{role.emoji}}</text>
+    <view class="role-title-wrap">
+      <text class="role-name">{{role.name}}</text>
+      <text class="role-key">{{roleKey}}</text>
+    </view>
+  </view>
+  <view class="role-persona">{{role.persona}}</view>
+  <view class="role-fate">
+    <view class="fate-item">
+      <text class="fate-label">你最可能的活法</text>
+      <text class="fate-text">{{role.howYouSurvive}}</text>
+    </view>
+    <view class="fate-item">
+      <text class="fate-label">你最可能的死法</text>
+      <text class="fate-text death">{{role.howYouDie}}</text>
+    </view>
+  </view>
+</view>

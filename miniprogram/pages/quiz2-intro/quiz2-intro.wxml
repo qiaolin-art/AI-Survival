@@ -1,0 +1,41 @@
+<view class="intro-page">
+  <view class="bg-overlay"></view>
+
+  <view class="content">
+    <!-- Icon -->
+    <view class="icon-wrap">
+      <view class="icon-grid">
+        <view class="grid-cell" wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this"></view>
+      </view>
+      <view class="icon-pulse"></view>
+    </view>
+
+    <!-- Title -->
+    <view class="title-section">
+      <view class="pre-title">AI来了</view>
+      <view class="main-title">你的工作还能保得住吗？</view>
+    </view>
+
+    <!-- Subtitle -->
+    <view class="subtitle">
+      <text class="subtitle-line">你，一个在大厂写了3年PRD的产品经理。</text>
+      <text class="subtitle-line accent">AI来抢活了。</text>
+    </view>
+
+    <!-- Description -->
+    <view class="desc-box">
+      <text class="desc-text">31个职场场景 · 4大职场维度 · 16种职场角色</text>
+    </view>
+
+    <!-- Start Button -->
+    <view class="start-btn" bindtap="onStart">
+      <text class="btn-text">开始测试</text>
+      <view class="btn-glow"></view>
+    </view>
+
+    <!-- Back -->
+    <view class="back-link" bindtap="onBack">
+      <text class="back-text">‹ 返回测试大厅</text>
+    </view>
+  </view>
+</view>

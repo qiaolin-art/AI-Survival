@@ -1,0 +1,73 @@
+<view class="result-page">
+  <!-- Probability Section -->
+  <view class="prob-section">
+    <text class="prob-label">你的职场存活概率</text>
+    <view class="prob-number-wrap">
+      <text class="prob-number">{{displayProbability}}</text>
+      <text class="prob-percent">%</text>
+    </view>
+    <view class="tier-title-wrap {{showContent ? 'reveal' : ''}}">
+      <text class="tier-title" wx:if="{{tier}}">「{{tier.title}}」</text>
+    </view>
+  </view>
+
+  <!-- Description -->
+  <view class="desc-section {{showContent ? 'reveal' : ''}}">
+    <text class="desc-text" wx:if="{{tier}}">{{tier.description}}</text>
+  </view>
+
+  <!-- Role Card -->
+  <view class="role-section {{showRole ? 'reveal' : ''}}">
+    <text class="section-label">你的职场角色</text>
+    <role-card role="{{role}}" role-key="{{roleKey}}"></role-card>
+  </view>
+
+  <!-- Radar Chart -->
+  <view class="radar-section {{showRadar ? 'reveal' : ''}}">
+    <text class="section-label">职场维度分析</text>
+    <radar-chart data="{{radarData}}" labels="{{radarLabels}}" accent-color="#636eff"></radar-chart>
+    <view class="radar-legend">
+      <view class="legend-item">
+        <text class="legend-dot dot-j"></text>
+        <text class="legend-label">{{radarData.J >= 50 ? '卷' : '润'}} {{radarData.J}}%</text>
+      </view>
+      <view class="legend-item">
+        <text class="legend-dot dot-d"></text>
+        <text class="legend-label">{{radarData.D >= 50 ? '驯AI' : '被AI驯'}} {{radarData.D}}%</text>
+      </view>
+      <view class="legend-item">
+        <text class="legend-dot dot-v"></text>
+        <text class="legend-label">{{radarData.V >= 50 ? '能见度高' : '隐形'}} {{radarData.V}}%</text>
+      </view>
+      <view class="legend-item">
+        <text class="legend-dot dot-i"></text>
+        <text class="legend-label">{{radarData.I >= 50 ? '不可替代' : '标准化'}} {{radarData.I}}%</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Survival Tip -->
+  <view class="tip-section {{showTip ? 'reveal' : ''}}">
+    <text class="section-label">职场生存锦囊</text>
+    <view class="tip-card" wx:if="{{tier}}">
+      <text class="tip-icon">💡</text>
+      <text class="tip-text">{{tier.tip}}</text>
+    </view>
+  </view>
+
+  <!-- Actions -->
+  <view class="actions {{showTip ? 'reveal' : ''}}">
+    <button class="share-btn" open-type="share">
+      分享给好友
+    </button>
+    <view class="save-btn" bindtap="onGeneratePoster">
+      保存海报
+    </view>
+    <view class="retry-btn" bindtap="onRetry">
+      重新测试
+    </view>
+  </view>
+
+  <!-- Hidden poster canvas -->
+  <canvas type="2d" id="posterCanvas" class="poster-canvas"></canvas>
+</view>

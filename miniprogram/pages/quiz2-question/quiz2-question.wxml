@@ -1,0 +1,42 @@
+<view class="question-page">
+  <!-- Top bar -->
+  <view class="top-bar">
+    <view class="back-btn {{currentIndex <= 0 ? 'hidden' : ''}}" bindtap="onGoBack">
+      <text class="back-arrow">‹</text>
+      <text class="back-text">上一题</text>
+    </view>
+    <view class="placeholder" wx:if="{{currentIndex <= 0}}"></view>
+  </view>
+
+  <!-- Progress -->
+  <view class="progress-section">
+    <progress-bar current="{{currentIndex + 1}}" total="{{total}}" chapter-name="{{chapterName}}"></progress-bar>
+  </view>
+
+  <!-- Question Content -->
+  <view class="question-content {{fadeIn ? 'fade-in' : 'fade-out'}}">
+    <!-- Question Tag -->
+    <view class="q-tag">
+      <text class="q-tag-text">Q{{question.id}}「{{question.title}}」</text>
+    </view>
+
+    <!-- Scenario -->
+    <view class="scenario">
+      <text class="scenario-text">{{question.scenario}}</text>
+    </view>
+
+    <!-- Options -->
+    <view class="options-list">
+      <option-card
+        wx:for="{{question.options}}"
+        wx:key="label"
+        label="{{item.label}}"
+        text="{{item.text}}"
+        index="{{index}}"
+        selected="{{selectedIndex === index}}"
+        disabled="{{transitioning}}"
+        bind:select="onOptionSelect"
+      ></option-card>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,78 @@
+.option-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 28rpx 32rpx;
+  margin-bottom: 20rpx;
+  background: #1a1a1a;
+  border: 2rpx solid #2a2a2a;
+  border-radius: 16rpx;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.option-card:active {
+  transform: scale(0.98);
+}
+
+.option-card.tapped {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.08);
+}
+
+.option-card.selected {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.12);
+}
+
+.option-card.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.option-label {
+  flex-shrink: 0;
+  width: 48rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: 700;
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.15);
+  border-radius: 12rpx;
+  margin-right: 24rpx;
+  margin-top: 2rpx;
+}
+
+.option-text {
+  flex: 1;
+  font-size: 30rpx;
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+.option-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20rpx;
+  height: 20rpx;
+  background: rgba(231, 76, 60, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 0.4s ease-out forwards;
+}
+
+@keyframes pulse {
+  0% {
+    width: 20rpx;
+    height: 20rpx;
+    opacity: 1;
+  }
+  100% {
+    width: 1200rpx;
+    height: 1200rpx;
+    opacity: 0;
+  }
+}

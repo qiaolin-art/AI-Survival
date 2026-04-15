@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/question/question",
+    "pages/result/result",
+    "pages/quiz2-intro/quiz2-intro",
+    "pages/quiz2-question/quiz2-question",
+    "pages/quiz2-result/quiz2-result"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0a0a0a",
+    "navigationBarTitleText": "AI测试站",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0a0a0a"
+  },
+  "sitemapLocation": "sitemap.json"
+}

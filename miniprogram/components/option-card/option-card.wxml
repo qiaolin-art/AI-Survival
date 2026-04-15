@@ -1,0 +1,6 @@
+<view class="option-card {{tapped ? 'tapped' : ''}} {{selected ? 'selected' : ''}} {{disabled ? 'disabled' : ''}}"
+  bindtap="onTap">
+  <view class="option-label">{{label}}</view>
+  <view class="option-text">{{text}}</view>
+  <view class="option-pulse" wx:if="{{tapped}}"></view>
+</view>

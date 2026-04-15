@@ -1,0 +1,48 @@
+<view class="index-page">
+  <view class="bg-overlay"></view>
+
+  <view class="content">
+    <!-- AI Eye -->
+    <view class="ai-eye-wrap">
+      <view class="ai-eye">
+        <view class="eye-ring ring-outer"></view>
+        <view class="eye-ring ring-middle"></view>
+        <view class="eye-ring ring-inner"></view>
+        <view class="eye-core"></view>
+      </view>
+    </view>
+
+    <!-- Title -->
+    <view class="title-section">
+      <view class="glitch-text" data-text="AI控制世界后">AI控制世界后</view>
+      <view class="main-title">你的存活概率</view>
+    </view>
+
+    <!-- Subtitle -->
+    <view class="subtitle">
+      <text class="subtitle-line">你，一个996了三年的打工人。</text>
+      <text class="subtitle-line accent">AI宣战了。</text>
+    </view>
+
+    <!-- Description -->
+    <view class="desc-box">
+      <text class="desc-text">30个末日场景 · 4大生存维度 · 16种末日角色</text>
+    </view>
+
+    <!-- Start Button -->
+    <view class="start-btn" bindtap="onStart">
+      <text class="btn-text">开始测试</text>
+      <view class="btn-glow"></view>
+    </view>
+
+    <!-- Back to Hub -->
+    <view class="back-link" bindtap="onBackToHub">
+      <text class="back-link-text">‹ 返回测试大厅</text>
+    </view>
+
+    <!-- Footer -->
+    <view class="footer">
+      <text class="footer-text">已有 {{participantCount}} 人参与测试</text>
+    </view>
+  </view>
+</view>

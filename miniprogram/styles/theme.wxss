@@ -1,0 +1,65 @@
+/* ===== Global Theme: 末日废墟风 ===== */
+
+/* Safe area helper */
+.safe-top {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Scrollbar hide */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Disable highlight on tap */
+view, text, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Button reset */
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button::after {
+  border: none;
+}
+
+/* Shared glow effect */
+.glow-red {
+  box-shadow: 0 0 20rpx rgba(231, 76, 60, 0.4);
+}
+
+/* Shared border pulse animation */
+@keyframes border-pulse {
+  0%, 100% { border-color: rgba(231, 76, 60, 0.3); }
+  50% { border-color: rgba(231, 76, 60, 0.6); }
+}
+
+/* Text truncation */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Fade utility */
+.fade-enter {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
