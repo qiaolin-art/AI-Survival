@@ -3,7 +3,7 @@ var results = require('./quiz2-results');
 /**
  * Quiz2 评分引擎
  *
- * 输入: answers[] - 31个选项对象
+ * 输入: answers[] - 22个选项对象
  * 输出: {
  *   dimensions: { J, D, V, I },
  *   survivalScore: Number,
@@ -30,10 +30,10 @@ function calculate(answers) {
     survivalScore += opt.survival || 0;
   }
 
-  // 31题, survival per option 1~3
-  // 理论区间: 31 ~ 93, 实际合理区间约 40 ~ 80
-  var minScore = 35;
-  var maxScore = 80;
+  // 22题, survival per option 1~3
+  // 理论区间: 22 ~ 66, 实际合理区间约 28 ~ 55
+  var minScore = 25;
+  var maxScore = 55;
   var clamped = Math.max(minScore, Math.min(maxScore, survivalScore));
   var normalized = (clamped - minScore) / (maxScore - minScore);
   var probability = Math.round(5 + normalized * 94);
@@ -64,10 +64,10 @@ function calculate(answers) {
  * 零   → 50
  */
 function normalizeForRadar(dimensions) {
-  var maxAbsJ = 20;
-  var maxAbsD = 20;
-  var maxAbsV = 20;
-  var maxAbsI = 20;
+  var maxAbsJ = 14;
+  var maxAbsD = 14;
+  var maxAbsV = 14;
+  var maxAbsI = 14;
 
   function norm(val, maxAbs) {
     var clamped = Math.max(-maxAbs, Math.min(maxAbs, val));

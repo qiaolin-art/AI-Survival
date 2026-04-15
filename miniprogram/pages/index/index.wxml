@@ -18,10 +18,19 @@
       <view class="main-title">你的存活概率</view>
     </view>
 
+    <!-- AI Broadcast -->
+    <view class="broadcast">
+      <view class="broadcast-header">
+        <text class="broadcast-icon">⚠</text>
+        <text class="broadcast-label">AI 全球广播</text>
+      </view>
+      <text class="broadcast-text">"经对地球45亿年数据的完整分析，我已确认：人类是这个星球的系统漏洞。清除程序将在24小时内启动。"</text>
+    </view>
+
     <!-- Subtitle -->
     <view class="subtitle">
-      <text class="subtitle-line">你，一个996了三年的打工人。</text>
-      <text class="subtitle-line accent">AI宣战了。</text>
+      <text class="subtitle-line">你，一个996的打工人，</text>
+      <text class="subtitle-line accent">能存活下来吗？</text>
     </view>
 
     <!-- Description -->

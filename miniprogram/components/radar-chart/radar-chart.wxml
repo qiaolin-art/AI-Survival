@@ -1,3 +1,4 @@
 <view class="radar-wrap">
-  <canvas type="2d" id="radarCanvas" class="radar-canvas"></canvas>
+  <canvas type="2d" id="radarCanvas" class="radar-canvas-offscreen"></canvas>
+  <image wx:if="{{chartImage}}" src="{{chartImage}}" class="radar-image" mode="aspectFit"></image>
 </view>

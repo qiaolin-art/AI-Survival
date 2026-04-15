@@ -23,7 +23,7 @@
   </view>
 
   <!-- Radar Chart -->
-  <view class="radar-section {{showRadar ? 'reveal' : ''}}">
+  <view class="radar-section" wx:if="{{showRadar}}">
     <text class="section-label">职场维度分析</text>
     <radar-chart data="{{radarData}}" labels="{{radarLabels}}" accent-color="#636eff"></radar-chart>
     <view class="radar-legend">

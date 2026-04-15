@@ -5,7 +5,15 @@
   padding: 20rpx 0;
 }
 
-.radar-canvas {
+.radar-canvas-offscreen {
+  position: fixed;
+  left: -9999rpx;
+  top: -9999rpx;
+  width: 480rpx;
+  height: 480rpx;
+}
+
+.radar-image {
   width: 480rpx;
   height: 480rpx;
 }

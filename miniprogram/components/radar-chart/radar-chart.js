@@ -14,6 +14,10 @@ Component({
     }
   },
 
+  data: {
+    chartImage: ''
+  },
+
   observers: {
     'data': function() {
       this.drawRadar();
@@ -37,14 +41,23 @@ Component({
           var canvas = res[0].node;
           var ctx = canvas.getContext('2d');
           var dpr = wx.getWindowInfo().pixelRatio;
-          var width = res[0].width;
-          var height = res[0].height;
+          var width = 240;
+          var height = 240;
 
           canvas.width = width * dpr;
           canvas.height = height * dpr;
           ctx.scale(dpr, dpr);
 
           self._draw(ctx, width, height);
+
+          setTimeout(function() {
+            wx.canvasToTempFilePath({
+              canvas: canvas,
+              success: function(imgRes) {
+                self.setData({ chartImage: imgRes.tempFilePath });
+              }
+            });
+          }, 50);
         });
     },
 

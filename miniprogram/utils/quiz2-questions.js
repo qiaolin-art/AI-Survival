@@ -1,6 +1,6 @@
 /**
  * Quiz2: AI来了，你的工作还能保得住吗
- * 31道题 · 6章节 · 4维度(J/D/V/I)
+ * 22道题 · 6章节 · 4维度(J/D/V/I)
  *
  * 维度说明:
  *   J: 卷(+) vs 润(-)     留下来卷 vs 趁早跑路
@@ -21,7 +21,7 @@ var CHAPTERS = [
 ];
 
 var QUESTIONS = [
-  // ===== 第一章: AI开始替你干活 (Q1-Q5) =====
+  // ===== 第一章: AI开始替你干活 (Q1-Q4) =====
   {
     id: 1,
     chapter: 1,
@@ -57,38 +57,6 @@ var QUESTIONS = [
   {
     id: 2,
     chapter: 1,
-    title: '第一版不需要你',
-    scenario: 'AI写的PRD已经像模像样，领导默认"第一版不需要你亲自写了"。你怎么办？',
-    options: [
-      {
-        label: 'A',
-        text: '把AI的初稿改三个字，然后在评审会上重点讲这三个字为什么关键',
-        dimensions: { J: 1, D: -1, V: 2, I: 0 },
-        survival: 2
-      },
-      {
-        label: 'B',
-        text: '建一个"AI出稿 → 我审核 → 提交"的SOP，把流程文档写得很专业，让老板觉得这套工作流本身就是我的价值',
-        dimensions: { J: 1, D: 2, V: 1, I: 0 },
-        survival: 3
-      },
-      {
-        label: 'C',
-        text: '往上游走——以后我只管定需求方向和拍板，写字的活AI干就行',
-        dimensions: { J: 1, D: 1, V: 0, I: 2 },
-        survival: 3
-      },
-      {
-        label: 'D',
-        text: '开始想：既然写PRD不值钱了，是不是该去学做AI产品经理？',
-        dimensions: { J: -1, D: 1, V: 0, I: 0 },
-        survival: 2
-      }
-    ]
-  },
-  {
-    id: 3,
-    chapter: 1,
     title: 'AI卷王同事',
     scenario: '组里有个同事把AI用得特别猛，原本三个人一天的活，他半天就能交。你的反应？',
     options: [
@@ -119,7 +87,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     chapter: 1,
     title: '十分钟竞品报告',
     scenario: '老板让你用AI做竞品分析，AI十分钟出了一份看起来很专业的报告。你怎么处理？',
@@ -151,7 +119,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 5,
+    id: 4,
     chapter: 1,
     title: '人只做AI做不好的',
     scenario: '部门开始流行一句话："以后人只做AI做不好的部分。"你最接近哪种想法？',
@@ -183,9 +151,9 @@ var QUESTIONS = [
     ]
   },
 
-  // ===== 第二章: AI开始定义你有没有价值 (Q6-Q11) =====
+  // ===== 第二章: AI开始定义你有没有价值 (Q5-Q8) =====
   {
-    id: 6,
+    id: 5,
     chapter: 2,
     title: 'AI标签',
     scenario: 'AI绩效系统给你打了个标签："做事稳定，但价值不够突出。"你的反应？',
@@ -217,7 +185,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 7,
+    id: 6,
     chapter: 2,
     title: 'AI打绩效',
     scenario: 'AI直接给你写了绩效评语，打分3.25（满分5分），评语写着："该员工工作态度认真，但创新性不足，核心产出可被AI工具部分替代，建议加强AI协作能力。"你的反应？',
@@ -249,7 +217,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 8,
+    id: 7,
     chapter: 2,
     title: '贡献度排名',
     scenario: '公司用AI算每个人的"贡献度排名"。你花了三个月救火的烂项目，排名倒数。你怎么做？',
@@ -281,71 +249,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 9,
-    chapter: 2,
-    title: '执行型 vs 高杠杆',
-    scenario: 'AI把你归类成"执行型员工"，却把一个只会做PPT的同事归类成"高杠杆员工"。你怎么想？',
-    options: [
-      {
-        label: 'A',
-        text: '先搞清楚凭什么——难道做PPT比做产品更"高杠杆"？',
-        dimensions: { J: 1, D: -1, V: 1, I: 0 },
-        survival: 1
-      },
-      {
-        label: 'B',
-        text: '学一下那个同事的套路，看看怎么把工作包装得更"高杠杆"',
-        dimensions: { J: 1, D: 1, V: 2, I: 0 },
-        survival: 2
-      },
-      {
-        label: 'C',
-        text: '开始在关键节点主动输出决策建议，让系统没法再把我归到执行层',
-        dimensions: { J: 1, D: 0, V: 1, I: 2 },
-        survival: 3
-      },
-      {
-        label: 'D',
-        text: '如果这个系统长期这样判断，可能需要去一个更看重实干的地方',
-        dimensions: { J: -2, D: 0, V: 0, I: 0 },
-        survival: 1
-      }
-    ]
-  },
-  {
-    id: 10,
-    chapter: 2,
-    title: '可被标准化',
-    scenario: 'AI评估说你的工作"大部分可以被标准化流程替代"。你最想先做什么？',
-    options: [
-      {
-        label: 'A',
-        text: '反手就把这些"可标准化"的工作自动化了——它说能替代，那我就让它替代，然后做更重要的事',
-        dimensions: { J: 1, D: 2, V: 0, I: 1 },
-        survival: 3
-      },
-      {
-        label: 'B',
-        text: '找到那些系统没法标准化的工作，比如"在需求评审会上说服一个不讲理的业务方"',
-        dimensions: { J: 1, D: 0, V: 0, I: 2 },
-        survival: 3
-      },
-      {
-        label: 'C',
-        text: '质疑评估本身：一份好PRD和一份AI PRD的区别，不是"可标准化"能概括的',
-        dimensions: { J: 1, D: -1, V: 1, I: 1 },
-        survival: 2
-      },
-      {
-        label: 'D',
-        text: '开始认真想：如果大部分工作真能标准化，这个岗位三年后还存在吗？',
-        dimensions: { J: -2, D: 0, V: 0, I: -1 },
-        survival: 1
-      }
-    ]
-  },
-  {
-    id: 11,
+    id: 8,
     chapter: 2,
     title: '培养名单',
     scenario: '领导参考AI名单决定谁重点培养。名单上没有你。你的做法？',
@@ -377,9 +281,9 @@ var QUESTIONS = [
     ]
   },
 
-  // ===== 第三章: AI开始抬高所有人的工作基线 (Q12-Q16) =====
+  // ===== 第三章: AI开始抬高所有人的工作基线 (Q9-Q12) =====
   {
-    id: 12,
+    id: 9,
     chapter: 3,
     title: '默认更快',
     scenario: '自从大家都用AI，领导默认所有人都该更快了。你的状态？',
@@ -411,39 +315,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 13,
-    chapter: 3,
-    title: '半天就该交',
-    scenario: '原来一天做完的活，现在被默认"半天就该交"。你的反应？',
-    options: [
-      {
-        label: 'A',
-        text: '半天交初稿，但会注明"这版还需要以下3点人工验证"——既快又显专业',
-        dimensions: { J: 1, D: 1, V: 1, I: 1 },
-        survival: 3
-      },
-      {
-        label: 'B',
-        text: '交，半天就半天，但暗中把省下的半天用来研究新方向',
-        dimensions: { J: -1, D: 1, V: -1, I: 0 },
-        survival: 2
-      },
-      {
-        label: 'C',
-        text: '跟老板说清楚：交得快不等于交得好，AI省的是打字时间，不是思考时间',
-        dimensions: { J: 1, D: -1, V: 1, I: 2 },
-        survival: 2
-      },
-      {
-        label: 'D',
-        text: '适应新节奏，但同时在领英上更新了状态为"Open to Work"',
-        dimensions: { J: -2, D: 0, V: 0, I: 0 },
-        survival: 1
-      }
-    ]
-  },
-  {
-    id: 14,
+    id: 10,
     chapter: 3,
     title: '标准被拉高',
     scenario: '组里最会用AI的人已经把标准拉高了，你的做法？',
@@ -475,7 +347,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 15,
+    id: 11,
     chapter: 3,
     title: '不难吧？',
     scenario: '老板说："AI都帮你了，这点事应该不难吧？"你怎么回应？',
@@ -507,7 +379,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 16,
+    id: 12,
     chapter: 3,
     title: '永远做更多',
     scenario: 'AI没让你轻松，反而让所有人觉得你应该做更多。你怎么应对？',
@@ -539,9 +411,9 @@ var QUESTIONS = [
     ]
   },
 
-  // ===== 第四章: AI开始让你的苦劳贬值 (Q17-Q21) =====
+  // ===== 第四章: AI开始让你的苦劳贬值 (Q13-Q15) =====
   {
-    id: 17,
+    id: 13,
     chapter: 4,
     title: '细稳不值钱了',
     scenario: '你以前最擅长"细、稳、能熬"，但AI来了，这些突然不值钱了。你会？',
@@ -573,39 +445,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 18,
-    chapter: 4,
-    title: 'AI几分钟搞定',
-    scenario: '以前你花很多时间做调研整理、竞品分析、写文档，现在AI几分钟搞定。你的想法？',
-    options: [
-      {
-        label: 'A',
-        text: '那我以后只做"调研之后的判断"——资料AI整理，结论我来定',
-        dimensions: { J: 1, D: 1, V: 0, I: 2 },
-        survival: 3
-      },
-      {
-        label: 'B',
-        text: '直接让AI全接了，然后把简历上这些技能改写成"AI辅助调研体系搭建"',
-        dimensions: { J: 0, D: 2, V: 1, I: -1 },
-        survival: 2
-      },
-      {
-        label: 'C',
-        text: '偷偷拿AI整理好的内容去邀功，反正也没人知道是谁写的',
-        dimensions: { J: 0, D: 1, V: -1, I: -2 },
-        survival: 1
-      },
-      {
-        label: 'D',
-        text: '如果我的核心工作AI几分钟就做了，那我得找到一个AI几分钟做不了的核心工作',
-        dimensions: { J: -1, D: 0, V: 0, I: 1 },
-        survival: 2
-      }
-    ]
-  },
-  {
-    id: 19,
+    id: 14,
     chapter: 4,
     title: 'AI也能写吧',
     scenario: '你做了一份很用心的方案，老板看了一眼说："这个AI也能写吧？"你怎么办？',
@@ -637,7 +477,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 20,
+    id: 15,
     chapter: 4,
     title: '80分和100分',
     scenario: '你最怕的不是AI做得不好，而是AI做得"差不多"。80分的活谁都能交，你的优势在那20分——但没人在乎了。你会：',
@@ -668,42 +508,10 @@ var QUESTIONS = [
       }
     ]
   },
-  {
-    id: 21,
-    chapter: 4,
-    title: '靠谱变客套',
-    scenario: '以前大家夸你"靠谱、能扛"，现在这话听着越来越像客套话。你怎么做？',
-    options: [
-      {
-        label: 'A',
-        text: '不再靠"做得多"证明自己，而是靠"决定对"——拍板比干活值钱',
-        dimensions: { J: 1, D: 0, V: 1, I: 2 },
-        survival: 3
-      },
-      {
-        label: 'B',
-        text: '把"靠谱"重新定义：不是事事亲力亲为，而是事事有人（AI）兜底',
-        dimensions: { J: 1, D: 2, V: 0, I: 0 },
-        survival: 2
-      },
-      {
-        label: 'C',
-        text: '趁"靠谱"的口碑还在，赶紧兑换成升职/调岗/涨薪',
-        dimensions: { J: 0, D: 0, V: 2, I: 0 },
-        survival: 2
-      },
-      {
-        label: 'D',
-        text: '如果"靠谱"已经不是核心竞争力了，我得找到新标签',
-        dimensions: { J: -1, D: 0, V: 0, I: 1 },
-        survival: 2
-      }
-    ]
-  },
 
-  // ===== 第五章: AI开始改写组织里的权力分配 (Q22-Q26) =====
+  // ===== 第五章: AI开始改写组织里的权力分配 (Q16-Q19) =====
   {
-    id: 22,
+    id: 16,
     chapter: 5,
     title: '定方向的人',
     scenario: 'AI来了以后，最值钱的人不是最会干活的，而是最会定方向的。你的做法？',
@@ -735,7 +543,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 23,
+    id: 17,
     chapter: 5,
     title: '话语权转移',
     scenario: '会用AI的人在组织里话语权越来越大。你的策略？',
@@ -767,39 +575,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 24,
-    chapter: 5,
-    title: '定义问题更值钱',
-    scenario: '原来"做得多"最被看见，现在慢慢变成"会定义问题"更值钱。你怎么做？',
-    options: [
-      {
-        label: 'A',
-        text: '以后汇报不说"我做了什么"，而是说"我发现了什么问题、做了什么判断"',
-        dimensions: { J: 1, D: 0, V: 2, I: 2 },
-        survival: 3
-      },
-      {
-        label: 'B',
-        text: '把AI接进来处理执行，自己只出现在需要拍板的环节',
-        dimensions: { J: 1, D: 2, V: 0, I: 1 },
-        survival: 2
-      },
-      {
-        label: 'C',
-        text: '主动抢"需求评审、方案评审、上线验收"这些定义标准的位置',
-        dimensions: { J: 2, D: 0, V: 1, I: 2 },
-        survival: 3
-      },
-      {
-        label: 'D',
-        text: '如果在当前岗位抢不到这些位置，去一个小公司当leader',
-        dimensions: { J: -2, D: 0, V: 0, I: 1 },
-        survival: 1
-      }
-    ]
-  },
-  {
-    id: 25,
+    id: 18,
     chapter: 5,
     title: '新分工',
     scenario: '部门出现新分工：有人让AI干活，有人给AI收尾。你往哪边靠？',
@@ -831,7 +607,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 26,
+    id: 19,
     chapter: 5,
     title: '最危险的人',
     scenario: '最危险的是既不会用AI、也没有判断力的人。你的策略？',
@@ -863,9 +639,9 @@ var QUESTIONS = [
     ]
   },
 
-  // ===== 第六章: AI开始让员工更透明，也更脆弱 (Q27-Q31) =====
+  // ===== 第六章: AI开始让员工更透明，也更脆弱 (Q20-Q22) =====
   {
-    id: 27,
+    id: 20,
     chapter: 6,
     title: 'AI监工',
     scenario: 'AI根据在线时长、回复速度、文档产出来判断谁在"认真工作"。你的反应？',
@@ -897,7 +673,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 28,
+    id: 21,
     chapter: 6,
     title: '低价值曝光',
     scenario: 'AI报表一拉，谁在做低价值工作一目了然。你的做法？',
@@ -929,71 +705,7 @@ var QUESTIONS = [
     ]
   },
   {
-    id: 29,
-    chapter: 6,
-    title: '一切可追踪',
-    scenario: '以前可以"默默做完就好"，现在AI要求一切可追踪、可量化。你怎么适应？',
-    options: [
-      {
-        label: 'A',
-        text: '那就追踪——但追踪的不是工时和产出量，而是"我做的每一个关键决策"',
-        dimensions: { J: 1, D: 0, V: 2, I: 2 },
-        survival: 3
-      },
-      {
-        label: 'B',
-        text: '配合系统，同时把自己从"只能量化工作量"的位置挪到"需要质性评估"的位置',
-        dimensions: { J: 1, D: 0, V: 0, I: 2 },
-        survival: 3
-      },
-      {
-        label: 'C',
-        text: '学会用系统的语言证明自己的价值——游戏规则变了，就按新规则玩',
-        dimensions: { J: 1, D: 2, V: 1, I: 0 },
-        survival: 2
-      },
-      {
-        label: 'D',
-        text: '如果一份工作的价值只能靠追踪来证明，那它可能本来就不够有价值',
-        dimensions: { J: -1, D: 0, V: -1, I: 0 },
-        survival: 1
-      }
-    ]
-  },
-  {
-    id: 30,
-    chapter: 6,
-    title: '可替代风险指数',
-    scenario: 'AI每周汇总每个人的"可替代风险指数"。你的指数不低。你怎么做？',
-    options: [
-      {
-        label: 'A',
-        text: '先拆这个指数怎么算的，有针对性地把最影响指数的那项补上',
-        dimensions: { J: 1, D: 2, V: 0, I: 0 },
-        survival: 2
-      },
-      {
-        label: 'B',
-        text: '主动去做更复杂、更需要人负责的事，把自己从高风险区挪出来',
-        dimensions: { J: 1, D: 0, V: 0, I: 2 },
-        survival: 3
-      },
-      {
-        label: 'C',
-        text: '忽略指数，去做一件让所有人都记住你的大事——一个漂亮的项目比一个好看的指数管用',
-        dimensions: { J: 1, D: -1, V: 2, I: 1 },
-        survival: 2
-      },
-      {
-        label: 'D',
-        text: '如果连续几周都高，别自欺欺人——是时候认真考虑Plan B了',
-        dimensions: { J: -2, D: 0, V: 0, I: 0 },
-        survival: 1
-      }
-    ]
-  },
-  {
-    id: 31,
+    id: 22,
     chapter: 6,
     title: '最后的照妖镜',
     scenario: '如果AI把你这份工作的每个环节都照得清清楚楚，你最担心暴露出来的是什么？',

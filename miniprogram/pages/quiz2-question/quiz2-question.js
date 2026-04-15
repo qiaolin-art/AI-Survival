@@ -10,7 +10,7 @@ Page({
     currentIndex: 0,
     question: null,
     chapterName: '',
-    total: 31,
+    total: 22,
     transitioning: false,
     fadeIn: true,
     selectedIndex: -1

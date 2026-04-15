@@ -139,7 +139,7 @@ Page({
 
     ctx.font = '13px -apple-system, sans-serif';
     ctx.fillStyle = '#555';
-    ctx.fillText('31个职场场景 · 4大职场维度 · 16种职场角色', w / 2, 340);
+    ctx.fillText('22个职场场景 · 4大职场维度 · 16种职场角色', w / 2, 340);
 
     ctx.font = 'bold 14px -apple-system, sans-serif';
     ctx.fillStyle = '#636eff';
